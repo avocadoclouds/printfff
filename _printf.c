@@ -2,7 +2,7 @@
 
 /**
  * _printf - function that produces output
- * according to a format
+ * according to a format.
  * @format: a pointer to the format string
  *
  * Return: the number of characters printed

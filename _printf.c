@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * _printf - function that produces output
- * according to a format.
+ * _printf - a function that produces
+ * output according to a format
  * @format: a pointer to the format string
  *
  * Return: the number of characters printed
@@ -15,8 +15,7 @@ int _printf(const char *format, ...)
   params_t params = PARAMS_INIT;
 
   va_start(ap, format);
-
-  if (!format || (formart[0] == '%' && !format[1]))
+  if (!format || (format[0] == '%' && !format[1]))
     return (-1);
   if (format[0] == '%' && format[1] == ' ' && !format[2])
     return (-1);
@@ -39,7 +38,7 @@ int _printf(const char *format, ...)
       if (get_modifier(p, &params))
 	p++;
       if (!get_specifier(p))
-	sum += print_from_to(start, p, params.1_modifier
+	sum += print_from_to(start, p, params.l_modifier
 			     || params.h_modifier ? p - 1 : 0);
       else
 	sum += get_print_func(p, ap, &params);
